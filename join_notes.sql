@@ -13,7 +13,7 @@ INSERT INTO basket_a (id, fruit_a) VALUES
     (1, 'Apple'),
     (2, 'Orange'),
  -- (3, 'Banana'),
-    (NULL, 'Cucumber'),
+    (NULL, 'Cucumber')
  -- (4, NULL),
  -- (NULL, NULL)
     ;
