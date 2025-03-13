@@ -85,10 +85,10 @@ SELECT sum(id) FROM basket_a WHERE id IS NOT NULL;
 -- (2) ILIKE does not exist and results in an error
 
 SELECT count(*) FROM basket_a WHERE fruit_a LIKE '%a%';
-SELECT count(*) FROM basket_a WHERE fruit_a ILIKE '%a%';
-SELECT count(*) FROM basket_a WHERE fruit_a ILIKE 'a%';
-SELECT count(*) FROM basket_a WHERE fruit_a ILIKE 'a';
-SELECT count(DISTINCT fruit_a) FROM basket_a WHERE fruit_a ILIKE '%a%';
+SELECT count(*) FROM basket_a WHERE fruit_a LIKE '%a%';
+SELECT count(*) FROM basket_a WHERE fruit_a LIKE 'a%';
+SELECT count(*) FROM basket_a WHERE fruit_a LIKE 'a';
+SELECT count(DISTINCT fruit_a) FROM basket_a WHERE fruit_a LIKE '%a%';
 
 -- GROUP BY considers NULL values to be their own group
 -- NULL values are by default ordered last
@@ -323,6 +323,7 @@ SELECT count(*)
 FROM basket_a a1, basket_a a2, basket_b
 WHERE a1.id = a2.id
   AND a1.fruit_a = basket_b.fruit_b;
+
 
 /*
 the above query is the same as

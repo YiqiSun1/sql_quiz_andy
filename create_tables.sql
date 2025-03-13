@@ -6,6 +6,8 @@
  * - Changing the id name of the two tables to match
  */
 
+DROP TABLE IF EXISTS basket_a;
+DROP TABLE IF EXISTS basket_b;
 CREATE TABLE basket_a (
     id INT,
     fruit_a VARCHAR(100)
@@ -34,5 +36,4 @@ VALUES
     (4, 'Orange'),
     (5, 'Watermelon'),
     (NULL, 'Pear'),
-    (6, NULL),
-    (NULL, NULL);
+    (6, NULL);
